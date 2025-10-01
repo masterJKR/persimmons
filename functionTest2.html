@@ -9,38 +9,73 @@
         function print( text) {
             document.write(`<div>${text}</div>`);
         }
-        //사각형의 너비와 높이 를 계산하여  넓이를 구하여 출력하는 함수
-        // 함수명 : rectArea 
-        // 매개변수 2개
+        // //사각형의 너비와 높이 를 계산하여  넓이를 구하여 출력하는 함수
+        // // 함수명 : rectArea 
+        // // 매개변수 2개
 
-        function rectArea( w, h){
-            print(`넓이 : ${w*h}`);
-        }
+        // function rectArea( w, h){
+        //     print(`넓이 : ${w*h}`);
+        // }
     
-        rectArea(20, 8 );
+        // rectArea(20, 8 );
 
-        // 3과목( 국어 , 수학 ,영어 )의 총점과 평균을 구하여 출력 하는 함수
-        // 함수명 : grade
-        // 매개변수 3개
+        // // 3과목( 국어 , 수학 ,영어 )의 총점과 평균을 구하여 출력 하는 함수
+        // // 함수명 : grade
+        // // 매개변수 3개
         
-        function grade( k , m ,e  ){
-            let total = k + m + e; //총점
-            let avg = total/3;   //평균
-            print(`총점 : ${total}, 평균 : ${avg}`);
+        // function grade( k , m ,e  ){
+        //     let total = k + m + e; //총점
+        //     let avg = total/3;   //평균
+        //     print(`총점 : ${total}, 평균 : ${avg}`);
+        // }
+
+        // grade(88, 99, 40);
+
+
+        // // 아래의 코드를 작성하고 올바르게 실행 될수 있게 함수를 만들어보세요!
+
+        // function hi( name ){
+        //     print(`안녕, ${name}!`);
+        // }
+        
+        // hi("이순신");  // 화면 출력은   안녕, 이순신! 
+        // hi("김정원");  // 화면 출력     안녕, 김정원!
+        // hi("박승찬");  // 화면 출력     안녕, 박승찬!
+
+
+        function start(){
+            document.write("<br>========가위 바위 보를 시작합니다.=======<br> ");
+            let user = parseInt( Math.random()*3 ) + 1  ; //1.가위 2.바위 3.보
+            let com = parseInt( Math.random() * 3 ) + 1;
+
+            // 유저와 컴퓨터가 각각 가위,바위, 보 중  무엇을 내었는지 출력 함수 실행
+
+            check(user);
+            check(com);
+
+            // 결과 를 확인 -  유저 기준에서 승, 패, 무 출력
+            result( user, com );
         }
 
-        grade(88, 99, 40);
+        function result( u, c){ // 결과 확인
+            let res ="패";
+            if( u===c) {
+                res = "비김";
+            }else if( (u===1 && c===3) || (u === 2 && c === 1) || (u===3 && c===2)){
+                res = "승";
+            }
+            document.write( res );
 
-
-        // 아래의 코드를 작성하고 올바르게 실행 될수 있게 함수를 만들어보세요!
-
-        function hi( name ){
-            print(`안녕, ${name}!`);
         }
-        
-        hi("이순신");  // 화면 출력은   안녕, 이순신! 
-        hi("김정원");  // 화면 출력     안녕, 김정원!
-        hi("박승찬");  // 화면 출력     안녕, 박승찬!
+
+        function check( player ){  // 가위바위보 문자열로 출력
+            let word = player === 1 ? "가위" : player === 2 ? "바위" : "보";
+            document.write( word );
+        }
+
+
+        start();
+
 
     </script>
 
