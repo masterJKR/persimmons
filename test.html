@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     //  자바스크립트 영역
+    //     var num1 = 20;
+    //     num1= 40;
+    //     var num1 = 50;
+
+    //     let num2 = 40;
+    //     num2 =43;
+    //  //   let num2 = 544;  재선언 오류
+
+    //     const pi = 3.14;
+    //    // pi = 3.15;
+
+    //     // 사각형의  밑변과 높이 를 계산하여 넓이를 구하세요
+    //     // 밑변 은 45 ,  높이는 30
+    //     // console.log 로 출력
+    //     let width = 45 , height = 30; //, area = width * height;
+    //     let area = width * height;
+        
+    //     console.log('밑변 : '+ width + ' 높이 : ' + height + ' 넓이 : ' + area);
+    //     console.log(`밑변 : ${width}  높이 : ${height}   넓이 : ${area}`);
+
+    //     // 국어 45점  수학 68점  영어 92점  
+    //     //  3과목의 총점을 계산하여 출력하세요.
+
+    //     let kor = 45 , mat = 68, eng = 92;
+    //     let total = kor + mat+ eng;
+    //     console.log(`국어 ${kor}점 , 수학 ${mat}점 , 영어 ${eng}점  `);
+    //     console.log(`총점 ${total}점`);
+
+    //     let temp = "100";
+    //     console.log( Number(temp) + 55);
+    //     temp = "100asd";
+    //     console.log( parseInt(temp) + 22 );
+
+    //     temp = "a100fff";
+    //     console.log( parseInt( temp ) + 11);
+
+    //     let  num = 200;  // 숫자를 문자열로 변환 
+    //     let str = String(num);
+    //     console.log(str);
+    //     let word = num.toString();
+
+    //     Boolean( 0 ); // false
+    //     Boolean( NaN ); // false 
+
+
+        // height 키 ,  wieght 몸무게
+        let height = 1.73 , weight = 65.9;
+        let BMI = weight / ( height * height);
+        console.log( ` BMI 값 : ${BMI}`);
+
+        // 4번 문제
+        let num1 = "10",  num2 = "20";
+        console.log( num1+ num2);
+        // 문자열상태에서는 더하기 연산이 아니라 합치기 
+        // 그래서 문자열을 더하기 연산이 가능한 숫자로 변환을 해야한다.
+        // 문자열 -> 숫자 변환  ( Number(),  parseInt(), parseFloat() )
+        console.log( Number(num1) + parseInt(num2) );
+
+
+        // 조건 연산자 
+        // 놀이동산 바이킹을타는데  키가 140 이상만 가능하다.
+        let tall = 156;
+        const result = tall >= 140  ?  "탑승가능" : "탑승불가";
+
+        console.log( result );
+
+        // 동전 앞면 뒷면 
+        // 1이면 앞, 2는뒷면
+        let coin = 1;
+        let res =  ( coin === 1 )  ? "앞면" : "뒷면"  ;
+        console.log( res);
+
+        // 2번문제
+        let item1 = 12000;
+        let item2 = 3500;
+        let item3 = 8000;
+        let sum = item1 + item2 + item3;
+
+        res = (sum >= 20000) ? "무료배송" : "배송비 3000원 추가";
+        console.log(res);
+
+        // 3번 문제
+        let num = parseInt(Math.random()*10) +1;
+        console.log( num );
+
+        res = (num % 2) === 1 ? "홀수" : "짝수"; 
+        console.log( res);
+
+
+
+        // 문자열 함수 
+        let word = "i like banana";
+        // 백틱( 템플릿 문자열 );
+        console.log( `너는 어떤 과일을 "좋아하니?" <div class="box">  ${word}  ` );
+
+        //문자열 길이
+        console.log( word.length );
+
+        //문자열의 특정 문자 출력
+        console.log( word[0]);
+        console.log( word.charAt(4) );
+
+        //문자열 거꾸로
+        console.log( word.split(" ") );
+        console.log( word.split("").reverse().join("") );
+
+
+        let fullName = "이순신";
+        document.write(` 안녕하세요! 저는 <b>${fullName}</b>입니다.`);
+
+        document.writeln(`문자열의 길이 -> <b style="color:red;">${fullName.length}</b>`);
+
+        document.writeln(` 성은 ${fullName.charAt(0) }입니다. `);
+        document.writeln("aa");
+        document.writeln("aa");
+        document.write(`${fullName.split("").reverse().join("") }`);
+
+
+
+        // 홍길동 학생 의 성적 구하기
+        // 3과목 성적구하기 (총점, 평균)
+        let kor = 45 , mat = 68, eng = 92 , his=77, sci=99;
+        let total = kor + mat+ eng + his+sci;
+
+        // 이순신 학생으 ㅣ성적 구하기
+        kor=65; mat=44; eng=88;
+        total = kor+mat+eng;
+
+        // 박문수 학생의 성적 구하기
+        kor=65; mat=66; eng=11;
+        total = kor+mat+eng;
+
+      //  let kor=20;
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+
+
+
