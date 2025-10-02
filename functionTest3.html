@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // input으로 부터  이름 과 나이를 입력하고 가져오기
+        // 이름과 나이를 출력하기
+        // 위 내용을 동작하는 함수 만들기
+        // "내정보" 버튼 클릭하면 실행
+
+        function info(){
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+
+            const res = `이름 : ${name} , 나이 : ${age}`;
+
+            document.getElementById("result").innerText = res;
+        }
+
+    </script>
+
+    <style>
+        #wrap{
+            width:500px;
+            margin:50px auto;
+        }
+        #wrap .input-field{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        .input-field input{
+            outline: none;
+            padding:5px 10px;
+            font-size:20px;
+        }
+        .bt{
+            margin:15px 0;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="wrap">
+        <div class="input-field">
+            <label for="name">이름</label>
+            <input type="text" id="name">
+            <label for="age">나이</label>
+            <input type="number" id="age">
+        </div>
+        <div class="bt">
+            <button type="button" onclick="info()">내정보</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+</body>
+</html>
