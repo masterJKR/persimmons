@@ -10,11 +10,32 @@
             //  '제출' 버튼을 클릭하면  
             //  <div id='print'></div> 에 출력 하세요
             //  모든 데이터(input 값)은 객체로 받아서 처리
-            
+        window.onload = function(){
+            let bt = document.querySelector("#send");
+            bt.addEventListener("click" , function(){
+                const name = document.querySelector("#name").value;
+                const age = document.querySelector("#age").value;
+                const birth = document.querySelector("#birth").value;
+                const my = {name,age,birth}; // 객체로 저장
+
+                let div = document.querySelector("#print");
+                div.innerHTML = ` 
+                    이름 : ${my.name}, 
+                    나이 : ${my.age},
+                    생년월일 : ${my.birth}
+                `;
+            } );
+        }
+
+      
     </script>
 
 </head>
 <body>
-    
+    이름 : <input type="text" name="" id="name"> <br>
+    나이 : <input type="number" name="" id="age"> <br>
+    생년월일 : <input type="date" name="" id="birth"> <br>
+    <button type="button" id="send">제출</button>
+    <div id="print"></div>
 </body>
 </html>
