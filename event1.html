@@ -4,8 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        window.onload = function(){
+
+            // html 태그에 이벤트 처리 가능하게 자바스크립트로 작성하기
+            // onXXXX 안하고 
+            let input = document.getElementById("desc"); // id가 desc인 태그 가져오기
+            // 해당 태그에 이벤트 등록하기 
+            // addEventListener('이벤트명', 이벤트발생시 실행할 함수 )
+            input.addEventListener('keyup',  function(){
+                let text = this.value; //input value값 가져오기
+                document.getElementById("out").innerText = text;
+            });
+
+        }
+
+        
+
+    </script>
+
 </head>
 <body>
     
+    <input type="text" name="" id="desc"> 
+    <div id="out"></div>
+<!-- 약어로 만들기 
+    input:text#desc    
+    div#out
+-->
+
 </body>
 </html>
