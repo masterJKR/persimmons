@@ -23,12 +23,23 @@
         <div id="result" class="field">
 
         </div>
-        <!-- 유저 가위바위보 영역 -->
+        <!-- 유저 가위바위보 영역 
+        html 태그에 값(data) 지정이 가능하다. 
+        태그에서 데이터로 활용되는건 아니고 , 스크립트나 css에서 사용할수 있도록 되어있다.
+        데이터set 설정 방법 
+          data-이름="값"   
+        -->
         <div id="user" class="field">
             <div class="picWrap">
-                <div class="picBox"><img src="./scissors.png" id="scissors"></div>
-                <div class="picBox"><img src="./rock.png" id="rock"></div>
-                <div class="picBox"><img src="./paper.png" id="paper"></div>
+                <div class="picBox">
+                    <img src="./scissors.png" id="scissors" class="userPic" data-user="1">
+                </div>
+                <div class="picBox">
+                    <img src="./rock.png" id="rock" class="userPic" data-user="2">
+                </div>
+                <div class="picBox">
+                    <img src="./paper.png" id="paper" class="userPic" data-user="3">
+                </div>
             </div>
             <h2 class="player-name">나</h2>
         </div>
