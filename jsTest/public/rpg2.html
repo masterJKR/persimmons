@@ -38,6 +38,52 @@
     </div>
 
     <script>
+        // 5개 스탯 무작위 값
+        const stat = document.querySelector("#stat"); // div#stat
+        // div#stat 에  버튼과  스탯 출력 5개 태그 넣기
+        let randomBt = document.createElement("button");
+        randomBt.textContent = "무작위스탯";
+        stat.appendChild(randomBt);
+
+        let str = document.createElement("div");
+        stat.appendChild(str);
+        let dex = document.createElement("div");
+        stat.appendChild(dex);
+        let agi = document.createElement("div");
+        stat.appendChild(agi);
+        let con = document.createElement("div");
+        stat.appendChild(con);
+        let int = document.createElement("div");
+        stat.appendChild(int);
+
+        // 스탯 값 localStorage에 저장하기 위해 객체 생성
+        const statValue = { 
+            strVal : 0 , 
+            dexVal : 0 , 
+            agiVal : 0 ,
+            conVal : 0 , 
+            intVal : 0
+         };
+
+        // 버튼 클릭하여 무작위 스탯 값 생성하기
+        randomBt.onclick = () => {
+            statValue.strVal = Math.floor(Math.random() * 10 ) + 5;
+            statValue.dexVal = Math.floor(Math.random() * 10 ) + 5;
+            statValue.agiVal = Math.floor(Math.random() * 10 ) + 5;
+            statValue.conVal = Math.floor(Math.random() * 10 ) + 5;
+            statValue.intVal = Math.floor(Math.random() * 10 ) + 5;
+
+            str.textContent = `힘 : ${statValue.strVal}`;
+            dex.textContent = `재주 : ${statValue.dexVal}`;
+            agi.textContent = `민첩 : ${statValue.agiVal}`;
+            con.textContent = `체력 : ${statValue.conVal}`;
+            int.textContent = `지능 : ${statValue.intVal}`;
+        };
+
+
+
+
+        // 저장하기
         const saveBtn = document.querySelector("#save");
         saveBtn.onclick = () => {
             let name = document.querySelector("#name").value;
@@ -47,6 +93,11 @@
             localStorage.setItem("name", name);
             localStorage.setItem("job", job);
             localStorage.setItem("gender", gender);
+            localStorage.setItem("str",statValue.strVal);
+            localStorage.setItem("dex", statValue.dexVal);
+            localStorage.setItem("agi",statValue.agiVal);
+            localStorage.setItem("con",statValue.conVal);
+            localStorage.setItem("int",statValue.intVal);
         }
 
         const loadBtn = document.querySelector("#load");
