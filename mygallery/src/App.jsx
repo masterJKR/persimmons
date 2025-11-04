@@ -2,26 +2,23 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'
-import SignIn from "./page/signIn";
-function Home(){
-  const navigate=useNavigate();
-  return(
-    <div>
-      <button onClick={ () => {navigate("/signIn")}}>가입하기</button>
-    </div>
-  );
-}
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
+import SignIn from "./page/SignIn";
+import Home from "./page/Home";
+import SignUp from "./page/SignUp";
 function App() {
   
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={ <Home />} />
-        <Route path="/signIn" element={ <SignIn />} />
-      </Routes>
-    </Router>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={ <Home />} />
+          <Route path="/signUp" element={ <SignUp />} />
+          <Route path="/signIn" element={ <SignIn />} />
+        </Routes>
+      </Router>
+    </div>
   )
 }
 
