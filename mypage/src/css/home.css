@@ -1,0 +1,13 @@
+.nav{
+    display:flex;
+    width:800px;
+    justify-content: space-around;
+    font-size:25px;
+    text-align: center;
+}
+.nav .link{
+    width:100px;
+    background:salmon;
+    color:white;
+    
+}
