@@ -1,8 +1,9 @@
 
 import React from "react";
-import {Link} from 'react-router-dom'
-import img1 from '../images/mo.jpg';
-import img2 from '../images/ban.jpg';
+import {Link, Routes, Route} from 'react-router-dom'
+import HomeIndex from "./HomeIndex";
+import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 export default function Home(){
   return(
@@ -12,10 +13,12 @@ export default function Home(){
             <Link to="/dir">작가</Link>
             <Link to="/signUp">로그인</Link>
         </div>
-        <div>
-            <img src={img1}/>
-            <img src={img2}/>
-        </div>
+        
+        <Routes>
+            <Route path="/" element={ <HomeIndex /> } /> 
+            <Route path="/signUp"  element={ <SignUp />} />
+            <Route path="/signIn" element={ <SignIn/>} />
+        </Routes>
     </div>
   );
 }
