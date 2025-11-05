@@ -9,10 +9,14 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 
+import Welcome from './pages/Welcome'
+
 function App() {
 
   return (
     <>
+      <Welcome name="이순신" age="24"/>
+
       <Router>
         <Routes>
 

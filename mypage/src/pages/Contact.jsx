@@ -5,9 +5,9 @@ export default function Contact(){
 
     return(
         <>
-
-            <input type="text" value={} onChange={   }/>
-    
+            <input type="text" onChange={ (e) => setName(e.target.value)  }/>
+        
+            <p >당신의 이름은 ? {name}</p>
         </>
     );
 }
