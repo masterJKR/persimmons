@@ -8,6 +8,8 @@ import Board from './component/study1/Board'
 import Member from './component/study1/Member'
 import Store from './component/study1/Store'
 import Schedule from './component/study2/Schedule'
+import Student from './component/study2/Student'
+import Memo from './component/study2/Memo'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/member" element={ <Member/>} />
           <Route path="/store/*" element={ <Store />} />
           <Route path="/schedule" element={ <Schedule />} />
+          <Route path="/studentname" element={ <Student />} />
+          <Route path="/simplememo" element={ <Memo />} />
         </Routes>
       </Router>
 

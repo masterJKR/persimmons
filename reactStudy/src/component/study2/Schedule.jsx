@@ -13,7 +13,7 @@ export default function Schedule(){
     const addItem = () => {  // 입력한 시간과 내용을  items 배열에 저장 시키기
         if( !time || !text.trim()) return; // 아무때나 등록버튼 클릭한다고 저장 시키면 안되지!!
         const newItem = {id : Date.now(), time , text: text.trim() };
-        console.log(newItem);
+        // console.log(newItem);
         setItems( p => [...p, newItem ].sort( (a,b) => a.time.localeCompare(b.time) ) );
         setTime("");  setText("");
     };

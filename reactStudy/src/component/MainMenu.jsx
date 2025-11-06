@@ -11,6 +11,8 @@ export default function MainMenu(){
             <Link to="/member" className='menu'>멤버</Link>
             <Link to="/store" className='menu'>상점구매</Link>
             <Link to="/schedule" className='menu'>시간표</Link>
+            <Link to="/studentname" className='menu'>학생명단</Link>
+            <Link to="/simplememo" className='menu'>간단메모</Link>
         </div>
     );
 }
