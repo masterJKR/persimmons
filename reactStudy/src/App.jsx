@@ -10,6 +10,7 @@ import Store from './component/study1/Store'
 import Schedule from './component/study2/Schedule'
 import Student from './component/study2/Student'
 import Memo from './component/study2/Memo'
+import Buyer from './component/study3/Buyer'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/schedule" element={ <Schedule />} />
           <Route path="/studentname" element={ <Student />} />
           <Route path="/simplememo" element={ <Memo />} />
+          <Route path="/productBuy/*" element={ <Buyer/>} />
         </Routes>
       </Router>
 
