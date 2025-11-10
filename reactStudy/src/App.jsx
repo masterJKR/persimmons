@@ -11,6 +11,11 @@ import Schedule from './component/study2/Schedule'
 import Student from './component/study2/Student'
 import Memo from './component/study2/Memo'
 import Buyer from './component/study3/Buyer'
+import TestEffect from './component/study3/TestEffect'
+import TestFetch from './component/study3/TestFetch'
+import DataList from './component/study4/DataList'
+import DataList2 from './component/study4/DataList2'
+import UserInfo from './component/study4/UserInfo'
 
 function App() {
   return (
@@ -25,6 +30,11 @@ function App() {
           <Route path="/studentname" element={ <Student />} />
           <Route path="/simplememo" element={ <Memo />} />
           <Route path="/productBuy/*" element={ <Buyer/>} />
+          <Route path="/effect1" element={ <TestEffect />}/>
+          <Route path="/fetch1" element={ <TestFetch />}/>
+          <Route path="/map1" element={ <DataList/>} />
+          <Route path="/map2" element={ <DataList2 />} />
+          <Route path="/users" element={ <UserInfo/>} />
         </Routes>
       </Router>
 
