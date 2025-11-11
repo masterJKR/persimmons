@@ -6,6 +6,8 @@ import {useState, useEffect} from 'react'
 export default function UserInfo(){
     const [users ,setUsers] = useState([]);
     const [keyword, setKeyword] = useState("");
+    const [ ad , setAd ] = useState(1); // 정렬 변경
+
     useEffect(
         () => {
             fetch("https://jsonplaceholder.typicode.com/users")
@@ -14,14 +16,24 @@ export default function UserInfo(){
         }, []
     );
     const userFilter = users.filter( u => 
-    [u.name , u.email, u.company.name] .join(" ")
-    .includes(keyword)
-    );
+        [u.name , u.email, u.company.name] .join(" ")
+        .includes(keyword)
+    ).sort( (a,b) => a.name.localeCompare(b.name)*ad  );
+
+    //  a.name.localeCompare(b.name) !== 0 ? 
+    //  a.name.localeCompare(b.name) : a.email.localeCompare(b.email)
+
     return(
         <>
             <Link to="/" className='home'>HOME</Link>
 
             <div className='border rounded-2xl p-4'>
+
+                <button onClick={() => setAd( ad * -1)}> 
+                  { ad==1 ? "오름차순" : "내림차순"}  
+                </button>
+               
+
                 <div className='mb-4'>
                 검색<input type="text" onChange={ (e)=>setKeyword(e.target.value)} className='border ml-2.5'/>
                 <button >검색</button>
