@@ -17,19 +17,42 @@ export default function Attend(){
         {id:7  , name:"김유신" , className:"2학년3반"  },{id:15  , name:"이방지" , className:"1학년1반"  },
         {id:8  , name:"김춘추" , className:"1학년1반"  }
     ]);
+
+    // 검색용  변수
+    const [search , setSearch ] = useState("");  // 검색은 문자열일테니 빈문자열초기화
+
+    const [ asc , setAsc] = useState(true);
+
+    // 검색 및 정렬 
+    const result = stds.filter( (s) => s.name.includes( search ) )
+                        .sort( (a,b) => 
+                           asc ? a.name.localeCompare(b.name)  :
+                                 b.name.localeCompare(a.name)
+                    );
+
     return(
         <>
             <Link to="/" className="home">HOME</Link>
             <div>
                 <div className="mb-4">
-                    검색 <input type="text"  className="border rounded p-2"/>
+                    검색 <input type="text"
+                            onChange={ (e) => setSearch(e.target.value) }
+                            className="border rounded p-2"/>
                 </div>
                 <div className="flex items-center gap-4">이름 정렬  
-                    <button>오름차순</button>
-                    <button>내림차순</button>
+                    <button onClick={ () => setAsc(true) }>오름차순</button>
+                    <button onClick={ () => setAsc(false) }>내림차순</button>
                 </div>
                 <div className="mt-4">
-                    {}
+                    {
+                        result.length === 0 ?
+                        <strong>검색 결과가 없습니다.</strong> :
+                        result.map(
+                            (std) => (
+                                <div key={std.id}>{ std.name } ({std.className})</div>
+                            )
+                        )
+                    }
                 </div>
             </div>
         </>
