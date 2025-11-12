@@ -54,10 +54,3 @@ export default function BarChart3(){
     );
 }
 
-const product = [
-    {product:"학습관리 시스템 " , sales : 920 },
-    {product:"취업 추천 플랫폼" , sales : 870 },
-    {product:"수강관리 자동화 플랫폼 " , sales : 780 },
-    {product:"데이터 분석 대시보드" , sales : 690 },
-    {product:"자동화 출결 관리 앱" , sales : 650 }
-]
