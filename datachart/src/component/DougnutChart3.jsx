@@ -35,7 +35,8 @@ export default function DougnutChart3(){
                 label:"2025년",
                 data : genderByYear["2025"],
                 cutout:"50%"
-            },{
+            },
+            {
                 label:"2024년",
                 data : genderByYear["2024"],
                 radius:"80%"

@@ -14,6 +14,7 @@ import DougnutChart1 from './component/DougnutChart1'
 import PiChart from './component/PiChart'
 import DougnutChart2 from './component/Dougnutchart2'
 import DougnutChart3 from './component/DougnutChart3'
+import MixChart from './component/MixChart'
 
 function App() {
   const [ show, setShow ] = useState(null); 
@@ -51,6 +52,8 @@ function App() {
             반 도넛</button>
         <button onClick={ () => setShow("L") } className={ btClass("L") }>
             이중 도넛</button>
+        <button onClick={ () => setShow("M") } className={ btClass("M") }>
+            혼합차트</button>
       </div>
 
       <div className='mt-8 '>
@@ -66,6 +69,7 @@ function App() {
         { show==="J" &&  <PiChart /> }
         { show==="K" &&  <DougnutChart2 /> }
         { show==="L" &&  <DougnutChart3 /> }
+        { show==="M" &&  <MixChart /> }
       </div>
     </>
   )
