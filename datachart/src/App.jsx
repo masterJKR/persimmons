@@ -15,6 +15,8 @@ import PiChart from './component/PiChart'
 import DougnutChart2 from './component/Dougnutchart2'
 import DougnutChart3 from './component/DougnutChart3'
 import MixChart from './component/MixChart'
+import ExpendInput from './component/ExpendInput'
+
 
 function App() {
   const [ show, setShow ] = useState(null); 
@@ -54,6 +56,8 @@ function App() {
             이중 도넛</button>
         <button onClick={ () => setShow("M") } className={ btClass("M") }>
             혼합차트</button>
+        <button onClick={ () => setShow("N") } className={ btClass("N") }>
+            지출내역</button>
       </div>
 
       <div className='mt-8 '>
@@ -70,6 +74,7 @@ function App() {
         { show==="K" &&  <DougnutChart2 /> }
         { show==="L" &&  <DougnutChart3 /> }
         { show==="M" &&  <MixChart /> }
+        { show==="N" &&  <ExpendInput /> }
       </div>
     </>
   )
