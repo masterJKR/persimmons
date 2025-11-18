@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {getFirestore } from 'firebase/firestore';
+import {getAuth, setPersistence, browserLocalPersistence } from 'firebase/auth';
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -18,4 +20,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app);
+export const db = getFirestore(app);  // 파이어스토어데이터베이스사용하기위해
+
+export const auth = getAuth( app );  // 파이어베이스 인증기능 사용위해
+
+// 로그인유지를 위해
+setPersistence( auth , browserLocalPersistence).catch(console.error);
+
+//  browserLocalPersistence  - 브라우저 종료 해도 유지 
