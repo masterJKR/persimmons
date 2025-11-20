@@ -2,18 +2,18 @@ import { BrowserRouter as Router , Routes, Route, Link } from "react-router-dom"
 import TodoPage from "./page/TodoPage"
 import SignUp from "./page/SignUp"
 import SignIn from "./page/SignIn"
+import AuthStatus from "./component/AuthStatus"
 
 function App() {
   
   return (
     <div>
-      <Link to="/signUp" >회원가입</Link>
-      <Link to="/signIn" >로그인</Link>
+      <AuthStatus />
       <Router>
         <Routes>
           <Route path="/" element={ <TodoPage />} />
           <Route path="/signUp" element={  <SignUp /> } />
-          <Route path="/singIn" element={ <SignIn />  } />
+          <Route path="/signIn" element={ <SignIn />  } />
         </Routes>
       </Router>
     </div>
