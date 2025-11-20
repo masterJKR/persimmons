@@ -3,6 +3,7 @@ import TodoPage from "./page/TodoPage"
 import SignUp from "./page/SignUp"
 import SignIn from "./page/SignIn"
 import AuthStatus from "./component/AuthStatus"
+import ProductPage from "./component/ProductPage"
 
 function App() {
   
@@ -12,7 +13,12 @@ function App() {
       <Router>
         <AuthStatus />
         <Routes>
-          <Route path="/" element={ <TodoPage />} />
+          <Route path="/" element={ 
+            <ProductPage>
+              <TodoPage />
+            </ProductPage>
+            } />
+
           <Route path="/signUp" element={  <SignUp /> } />
           <Route path="/signIn" element={ <SignIn />  } />
         </Routes>
