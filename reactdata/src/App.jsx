@@ -8,8 +8,9 @@ function App() {
   
   return (
     <div>
-      <AuthStatus />
+      
       <Router>
+        <AuthStatus />
         <Routes>
           <Route path="/" element={ <TodoPage />} />
           <Route path="/signUp" element={  <SignUp /> } />

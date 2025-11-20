@@ -14,7 +14,7 @@ export default function AuthStatus(){
 
     return(
         <header>
-           
+            <Link to="/">HOME</Link>
             {
                 user ? (  // 로그인 성공시 보여줄 내용
                     <div>

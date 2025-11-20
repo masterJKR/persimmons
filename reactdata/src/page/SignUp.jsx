@@ -48,13 +48,13 @@ export default function SignUp(){
             <form onSubmit={ onSubmit }>
                 <div>
                     <label>이메일</label>
-                    <input type="email" onChange={ (e) => setEmail(e.target.value)}/>
+                    <input type="email" className='border bg-white' onChange={ (e) => setEmail(e.target.value)}/>
                 </div>
                 <div>
                     <label>비밀번호</label>
-                    <input type="password" onChange={ (e) => setPw(e.target.value)}/>
+                    <input type="password" className='border bg-white' onChange={ (e) => setPw(e.target.value)}/>
                 </div>
-                <button disabled={loading}>
+                <button disabled={loading} className='bg-white cursor-pointer'>
                     {loading ? "가입중..." : "회원가입"}
                 </button>
             </form>
