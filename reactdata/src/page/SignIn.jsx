@@ -15,7 +15,7 @@ export default function SignIn(){
     async function onSubmit(e){
         e.preventDefault();
         if( !email || !pw ){
-            alert("이메일과 비밀번호 입력");
+            alert("이메ss과 비밀번호 입력");
             return;
         }
         setLoading(true);
